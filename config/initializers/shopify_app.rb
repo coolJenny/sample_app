@@ -16,6 +16,8 @@ ShopifyApp.configure do |config|
   ]
   config.scripttags = [
   	{event: 'onload', src: 'http://localhost:3000/fancy.js'}
-  	{event: 'onload', src: ->(domain) {dynamic_tag_url(domain)}}
+  ]
+  config.scripttags = [
+  	{event: 'onload', src: ->(domain) {dynamic_tag_url(domain)} }
   ]
 end
